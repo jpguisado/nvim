@@ -1,5 +1,5 @@
 require("jpguisado.remap")
-print("hello from Jpguisado")
+require("jpguisado.set")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+	    "williamboman/mason.nvim",
  	    'VonHeikemen/lsp-zero.nvim', branch = 'v3.x',
 	    'neovim/nvim-lspconfig',
 	    'hrsh7th/cmp-nvim-lsp',
