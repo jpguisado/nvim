@@ -27,6 +27,7 @@ require("lazy").setup({
 	    "rose-pine/neovim", name = "rose-pine",
 	    'nvim-telescope/telescope.nvim', tag = '0.1.5',
 	    "nvim-lua/plenary.nvim",
+        "tpope/vim-fugitive",
 -- or                              , branch = '0.1.x',
       dependencies = { 'nvim-lua/plenary.nvim' }
     }
