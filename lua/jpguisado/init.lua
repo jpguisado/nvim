@@ -25,11 +25,20 @@ require("lazy").setup({
 	    "theprimeagen/harpoon", 
 	    "nvim-treesitter/nvim-treesitter", run = ":TSUpdate",
 	    "rose-pine/neovim", name = "rose-pine",
-	    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+	    'nvim-telescope/telescope.nvim', tag = '0.1.x',
 	    "nvim-lua/plenary.nvim",
         "tpope/vim-fugitive",
--- or                              , branch = '0.1.x',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        },
+        dependencies = { 'nvim-lua/plenary.nvim' }
     }
-
 }) 

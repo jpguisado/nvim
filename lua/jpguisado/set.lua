@@ -1,3 +1,7 @@
+vim.cmd("let g:netrw_liststyle = 3")
+
+
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -5,6 +9,15 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.autoindent = true -- copy indent from current line when starting new onw
+
+vim.opt.signcolumn = "yes"
+
+vim.opt.backspace = "indent,eol,start"
+
+-- clipboard
+vim.opt.clipboard:append("unnamedplus")
+
 
 vim.opt.smartindent = true
 
