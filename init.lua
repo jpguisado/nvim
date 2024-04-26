@@ -1,2 +1,2 @@
-require("jpguisado")
-
+require("jpguisado.core")
+require("jpguisado.lazy")
