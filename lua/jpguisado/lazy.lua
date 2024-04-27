@@ -11,9 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("jpguisado.plugins", {
+require("lazy").setup({ { import = "jpguisado.plugins" }, { import = "jpguisado.plugins.lsp" } }, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
   change_detection = {
-   notify = false,
-   enabled = true,
+    notify = false,
   },
 })
